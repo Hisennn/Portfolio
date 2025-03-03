@@ -580,4 +580,7 @@ html {
     max-width: 35ch;
     font-size: 1.1rem;
   }
+  .cursos-info ul li {
+    margin-top: 20px;
+  }
 }
