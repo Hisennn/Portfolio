@@ -8,6 +8,10 @@
   align-self: center;
 }
 
+ul {
+  padding: 0px;
+}
+
 .ul-contatos {
   color: #fff;
   align-content: center;
@@ -57,6 +61,7 @@
 .bottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 120px 20px;
@@ -172,6 +177,7 @@
 .faculdade-tipo {
   text-transform: uppercase;
   font-size: 0.9rem;
+  font-weight: bold;
 }
 .faculdade-nome {
   text-transform: uppercase;
@@ -180,6 +186,7 @@
 
 .formacao {
   background-color: #141414;
+  background-image: url("./img/pattern.svg");
 }
 
 .formacao-container {
@@ -212,11 +219,10 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   max-width: 1200px;
-  padding: 40px 20px;
+  padding: 20px 20px 10px 20px;
   margin: 0 auto;
   gap: 100px;
   align-items: center;
-  margin-bottom: 60px;
 }
 
 .info h1 {
@@ -238,23 +244,8 @@
   z-index: -1;
 }
 
-.info-skills {
-  display: flex;
-  flex-wrap: wrap;
-  text-transform: uppercase;
-  gap: 20px;
-}
-
-.info-item {
-  background-image: url("./img/onda.svg");
-  background-color: #e9e9e9;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 1.2rem;
-}
-
 .foto {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   display: block;
   border-radius: 10px;
@@ -263,7 +254,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 3rem 1.5rem;
+  padding: 30px 15px;
   max-width: 1200px;
   align-items: center;
   margin: 0 auto;
@@ -358,9 +349,96 @@ html {
 
 .cop {
   background-color: #141414;
+  background-image: url("./img/pattern.svg");
   padding: 30px 20px;
   font-size: 1.3rem;
   text-align: center;
+}
+.dev {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.dev h3 {
+  font-size: 1.3rem;
+  margin: auto 0;
+}
+
+.dev ul li {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.dev-skills {
+  grid-column: 2;
+}
+
+.dev-skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0px;
+}
+
+.dev-skills ul li {
+  background-color: #cfd8dc;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+
+.dev img {
+  max-width: 100%;
+  width: 32px;
+  height: 32px;
+  align-self: center;
+}
+
+.desenvolvimento,
+.ferramentas {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background-color: #f7f7f7;
+  min-width: 600px;
+  max-width: 600px;
+  border-radius: 4px;
+  padding: 30px 30px;
+  gap: 10px;
+  justify-self: left;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.desenvolvimento:hover,
+.ferramentas:hover {
+  transform: scale(1.05);
+}
+
+.desenvolvimento::before,
+.ferramentas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+  transition: left 0.5s ease-in-out;
+}
+
+.desenvolvimento:hover::before,
+.ferramentas:hover::before {
+  left: 100%;
+}
+
+.ref {
+  font-size: 1rem;
 }
 
 @media (max-width: 900px) {
@@ -452,6 +530,10 @@ html {
     padding: 40px 20px;
   }
 
+  .formacao-info {
+    max-width: 30ch;
+  }
+
   .bottom {
     display: grid;
     grid-template-columns: 1fr;
@@ -469,5 +551,33 @@ html {
 
   .ul-contatos li {
     font-size: 1rem;
+  }
+
+  .ul-contatos {
+    padding: 0px;
+  }
+
+  .desenvolvimento,
+  .ferramentas {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: #f7f7f7;
+    min-width: 200px;
+    border-radius: 4px;
+    padding: 15px 15px;
+    gap: 10px;
+  }
+
+  .dev {
+    justify-items: left;
+  }
+
+  .bottom-texto {
+    text-align: left;
+  }
+
+  .last p {
+    max-width: 35ch;
+    font-size: 1.1rem;
   }
 }
