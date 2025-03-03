@@ -267,10 +267,11 @@ ul {
 }
 
 .foto {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 10px;
+  object-fit: contain;
 }
 
 header {
