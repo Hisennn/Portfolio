@@ -408,10 +408,9 @@ html {
   padding: 0px;
 }
 
-.dev-skills ul li {
-  background-color: #cfd8dc;
-  padding: 5px 15px;
-  border-radius: 4px;
+.dev-skills ul li img {
+  width: 42px;
+  height: 42px;
 }
 
 .dev img {
